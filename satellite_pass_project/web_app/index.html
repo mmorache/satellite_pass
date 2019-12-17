@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>Satellite Pass Predictions</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script type="text/javascript" src="satellite_input.js" align="center"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="satellite_input" ng-controller="MainCtrl">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<div class="page-header"> 
+  <h1> Satellite Pass Predictions</h1>
+
+  <form ng-submit="post_profile()" style = "margin-top:30px;">
+    <h3>Enter your information</h3>
+    Satellite Name: <br>
+    <select type="text" ng-model="sat_name" name = "Satellites" style = "color:black;">
+    	<option value="25544" selected>International Space Station</option>
+    	<option value="43857">DaVinci</option>
+    	<option value="43016">MakerSat-0</option>
+    	<option value="44329">NepaliSat-1</option>
+    	<option value="20580">Hubble Space Telescope</option>
+    	<option value="43600">Aeoulus</option>
+    </select>
+    <br>
+    Your Location: <br>
+    <input type="text" ng-model="address" placeholder="address" style = "color:black;"></input>
+    <br>
+    Your Email: <br>
+    <input type="text" ng-model="email" placeholder="email" style = "color:black;"></input>
+    <br>
+    <br>
+    <button type="submit" style = "color:black;">Submit</button>
+  </form>
+<hr>
+  <script>
+var norad_n2yo = '25544|International Space Station,43600|Aeolus,20580|Hubble Space Telescope,44329|NepaliSat-1,43016|MakerSat-0,43857|DaVinci';
+var size_n2yo = 'medium';
+var allpasses_n2yo = '0';
+var map_n2yo = '2';
+</script>
+<script type="text/javascript" src="https://www.n2yo.com/js/widget-tracker.js"></script>
+</div>
+</div>
+</div>
+
+
+
+
+<footer class="footer">&#169; Mathias Morache</footer>
+</body>
+</html>
